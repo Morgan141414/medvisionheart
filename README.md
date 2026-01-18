@@ -39,6 +39,18 @@ Open Vite URL (usually `http://127.0.0.1:5173/`) and click **Launch Interactive 
 
 See: [docs/SERVER_REQUIREMENTS.md](docs/SERVER_REQUIREMENTS.md)
 
+## Deploy (Vercel)
+
+This project is intended to be deployed as a **frontend-only** app on Vercel.
+
+- Import the GitHub repo into Vercel
+- Set **Root Directory** to `frontend`
+- Framework preset: **Vite** (auto-detected)
+- Build command: `npm run build`
+- Output directory: `dist`
+
+SPA routing for `/demo` is handled by [frontend/vercel.json](frontend/vercel.json).
+
 ---
 
 # Patient Gift MVP (QR + Print Card + OpenSCAD)
