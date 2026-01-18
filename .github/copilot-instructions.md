@@ -1,0 +1,4 @@
+- Use concise, direct communication.
+- Prefer minimal, working MVP implementations.
+- Keep code simple and readable.
+- Avoid adding unrelated dependencies.

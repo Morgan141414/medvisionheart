@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Myocardium",
+    "type": "Mesh",
+    "meshIndex": 0,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  },
+  {
+    "name": "Chamber_Left",
+    "type": "Mesh",
+    "meshIndex": 1,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  },
+  {
+    "name": "Chamber_Right",
+    "type": "Mesh",
+    "meshIndex": 2,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  },
+  {
+    "name": "Aorta",
+    "type": "Mesh",
+    "meshIndex": 3,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  },
+  {
+    "name": "PulmonaryArtery",
+    "type": "Mesh",
+    "meshIndex": 4,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  },
+  {
+    "name": "Valve_Aortic",
+    "type": "Mesh",
+    "meshIndex": 5,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  },
+  {
+    "name": "Valve_Mitral",
+    "type": "Mesh",
+    "meshIndex": 6,
+    "meshName": "(unnamed-mesh)",
+    "primitives": 1
+  }
+]

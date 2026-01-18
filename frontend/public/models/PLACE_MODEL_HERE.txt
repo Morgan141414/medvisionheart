@@ -1,0 +1,7 @@
+Put your heart model here as:
+
+  public/models/heart.glb
+
+Notes:
+- Do NOT commit proprietary/copyrighted assets without the right license.
+- If you use a Sketchfab CC Attribution model, keep the attribution in the repo (see docs/attribution.md).

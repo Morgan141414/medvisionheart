@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Здравствуйте, {{ gift.patient_name }}!</h1>
+<p class="muted">Небольшая практика на 60 секунд, чтобы снизить напряжение.</p>
+
+<section class="card">
+  <h2>Дыхание 4–6 (1 минута)</h2>
+  <ol>
+    <li>Вдох носом на <strong>4</strong>.</li>
+    <li>Выдох на <strong>6</strong> (медленнее, чем вдох).</li>
+    <li>Повторите 6–8 циклов.</li>
+  </ol>
+  {% if gift.note %}
+    <p><strong>Заметка:</strong> {{ gift.note }}</p>
+  {% endif %}
+  {% if gift.clinician %}
+    <p class="muted">С заботой: {{ gift.clinician }}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>Скачать / распечатать</h2>
+  <p><a href="/g/{{ gift.slug }}/print">Печатная карточка с QR</a></p>
+  <p><a href="/g/{{ gift.slug }}/tag.scad">OpenSCAD шаблон брелка (.scad)</a></p>
+  <p class="muted">QR ведёт на эту страницу: {{ qr_url }}</p>
+</section>
+{% endblock %}

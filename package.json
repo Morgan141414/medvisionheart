@@ -1,0 +1,16 @@
+{
+  "name": "project-6",
+  "version": "1.0.0",
+  "description": "Small FastAPI MVP to:\r - create a “gift record” for a patient (name, note, clinician)\r - generate a unique slug\r - serve a patient landing page by QR\r - serve a print-friendly card with QR\r - serve a parameterized OpenSCAD `.scad` template for a breathing keychain",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

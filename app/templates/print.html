@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Печать — {{ gift.patient_name }}</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+      @media print {
+        .no-print { display: none; }
+        body { background: white; }
+        .container { max-width: none; padding: 0; }
+        .card { box-shadow: none; border: 1px solid #ddd; }
+      }
+      .print-card {
+        display: grid;
+        grid-template-columns: 1fr 140px;
+        gap: 16px;
+        align-items: center;
+      }
+      .qr-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        padding: 10px;
+        background: #fff;
+      }
+      .qr-box img { width: 120px; height: 120px; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="no-print" style="margin: 16px 0; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="button" href="/admin{% if admin_token %}?token={{ admin_token }}{% endif %}">← Админка</a>
+        <a class="button" href="/g/{{ gift.slug }}">Открыть лендинг</a>
+        <a class="button" href="/g/{{ gift.slug }}/tag.scad">Скачать SCAD</a>
+        <button class="button" onclick="window.print()">Печать</button>
+      </div>
+
+      <section class="card">
+        <div class="print-card">
+          <div>
+            <h1 style="margin:0;">{{ gift.patient_name }}</h1>
+            <p class="muted" style="margin: 6px 0 0;">60 секунд дыхания 4–6</p>
+            <p style="margin: 12px 0 0;">Вдох 4 · Выдох 6 · Повторите 6–8 раз</p>
+            {% if gift.clinician %}
+              <p class="muted" style="margin: 12px 0 0;">С заботой: {{ gift.clinician }}</p>
+            {% endif %}
+            <p class="muted" style="margin: 12px 0 0; font-size: 12px;">{{ landing_url }}</p>
+          </div>
+          <div class="qr-box">
+            {{ qr_svg | safe }}
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
