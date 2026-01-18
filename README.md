@@ -7,6 +7,10 @@ This repo contains two related demos:
 
 ## SAA demo (React + Three.js)
 
+Live demo:
+- https://medvisionheart-zfj07z08o-morgan141414s-projects.vercel.app
+- Demo page: https://medvisionheart-zfj07z08o-morgan141414s-projects.vercel.app/demo
+
 ### Run
 
 Backend (mock MIS API):
@@ -48,6 +52,9 @@ This project is intended to be deployed as a **frontend-only** app on Vercel.
 - Framework preset: **Vite** (auto-detected)
 - Build command: `npm run build`
 - Output directory: `dist`
+
+Deployed URL:
+- https://medvisionheart-zfj07z08o-morgan141414s-projects.vercel.app
 
 SPA routing for `/demo` is handled by [frontend/vercel.json](frontend/vercel.json).
 
